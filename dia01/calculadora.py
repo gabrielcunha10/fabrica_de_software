@@ -8,7 +8,10 @@ elif operação == "SUBTRAÇÃO":
 elif operação == "MULTIPLICAÇÃO":
     resultado = num1 * num2
 elif operação == "DIVISÃO":
-    resultado = num1 // num2
+    if num2 == 0:
+        print("Divisão por zero não é permitido.")
+        exit()
+    resultado = num1 / num2
 else:
     print("Escolha uma das quatro opções.")
-print(f"A {operação} de {num1} e {num2} é igual à: {resultado}")
+print(f"A {operação} de {num1} e {num2} é igual à: {resultado:.1f}")
